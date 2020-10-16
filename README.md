@@ -1,0 +1,1 @@
+# pierwszy_projekt_django
