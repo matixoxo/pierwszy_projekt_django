@@ -1,0 +1,19 @@
+{% extends 'strona.html' %}
+
+{% block kategoria %}
+
+    {% if ksiazka_kat %}
+    <div style="width: 70%; float: left;">
+        <h2>Książki z kategorii : {{ kategoria.nazwa }}</h2>
+        {% for ksiazka in ksiazka_kat %}
+
+            <p><a href="/ksiazka/{{ ksiazka.id }}/">{{ ksiazka.nazwa }}</a></p>
+
+
+        {% endfor %}
+    </div>
+
+    {% else %}
+        <p>Nie ma takiej kategorii w bazie</p>
+    {% endif %}
+{% endblock %}

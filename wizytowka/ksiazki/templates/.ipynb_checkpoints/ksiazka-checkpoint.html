@@ -1,0 +1,11 @@
+{% extends 'strona.html' %}
+
+{% block ksiazka %}
+
+    {% if ksiazka %}
+        <h1>{{ ksiazka.nazwa }}</h1>
+        <p>{{ ksiazka.autor }}</p>
+    {% else %}
+        <p>Nie ma takiej książki w bazie</p>
+    {% endif %}
+{% endblock %}
